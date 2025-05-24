@@ -21,7 +21,7 @@ export default function Inbox() {
           Your inbox
         </h2>
         <hr className="text-gray-400 opacity-20" />
-        <p className="my-4 flex justify-around text-lg font-bold">
+        <p className="my-4 flex xl:justify-around lg:justify-between lg:block hidden text-lg font-bold">
           <span className="cursor-pointer">
             5 Open <FontAwesomeIcon icon={faChevronDown} />
           </span>
@@ -33,23 +33,23 @@ export default function Inbox() {
           {inbox.map((chat, index) => {
             return (
               <div
-                className={`flex mb-4 py-3 items-center justify-around rounded-2xl hover:bg-blue-400 cursor-pointer ${
+                className={`flex mb-4 py-3 items-center 2xl:justify-around gap-4 rounded-2xl hover:bg-blue-400 cursor-pointer ${
                   index === 0 ? "bg-blue-200" : ""
                 }`}
                 key={index}
               >
-                <p className="ml-4 px-6 py-4 bg-blue-600 text-xl text-white rounded-full">
+                <p className="2xl:ml-4 xl:ml-0 2xl:px-6 2xl:py-4 px-4 py-2 bg-blue-600 2xl:text-xl xl:text-lg text-white rounded-full">
                   {chat.messenger.charAt(0)}
                 </p>
                 <div className="text-xl text-gray-600 font-semibold">
                   <p>{chat.messenger}</p>
-                  <p>
+                  <p className="xl:block hidden">
                     {chat.message.length > 20
                       ? chat.message.slice(0, 20) + "..."
                       : chat.message}
                   </p>
                 </div>
-                <div className="ml-4">
+                <div className="ml-4 2xl:block hidden">
                   <p
                     className={`${
                       chat.staleTime > 0 ? "opacity-100" : "opacity-0"

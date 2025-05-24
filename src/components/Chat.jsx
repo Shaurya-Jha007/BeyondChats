@@ -30,7 +30,7 @@ export default function Chat() {
     >
       <div className="h-18 flex justify-between items-center">
         <p className="ml-4 font-semibold text-3xl">Luis Easton</p>
-        <div className="flex mr-4 gap-2 items-center">
+        <div className="mr-4 gap-2 items-center sm:flex hidden">
           <FontAwesomeIcon className={commonClassname} icon={faEllipsis} />
           <FontAwesomeIcon className={commonClassname} icon={faMoon} />
           <p className="px-6 py-2 text-xl rounded-xl bg-gray-700 hover:bg-gray-900 text-white cursor-pointer">
@@ -40,7 +40,7 @@ export default function Chat() {
         </div>
       </div>
       <hr className="text-gray-400 opacity-20" />
-      <div className="h-[73%] flex flex-col gap-2">
+      <div className="h-[73%] flex flex-col md:mt-4 sm:mt-8 mt-12 lg:mt-0 md:gap-2 gap-8">
         <div className="h-36 mt-4 mx-4 flex items-center">
           <p className="px-5 py-2 rounded-full text-2xl bg-purple-300">L</p>
           <p className="mx-2 text-xl py-4 px-4 rounded-xl bg-gray-400">
